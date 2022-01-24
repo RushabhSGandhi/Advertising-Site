@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Add Advertisments</h1>
+    <p class="lead">This  is a web Application to add Advertisment . Feel Free to add any Advertisment of your choice 😋😋😋</p>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+
+  <% @adds.each do |add| %>
+    <% if add.is_published %>
+    <div class="col col-md-3" style="margin:0.7em;">
+    <div class="card" style="width: 18rem;">
+    <img src=<%= add.images %> class="card-img-top" alt="abab">
+    <div class="card-body">
+      <h5 class="card-title"><%= add.title %></h5>
+      <p class="card-text"><%= add.description %></p>
+      <button class="btn btn-primary" style="text-decoration: none;"><%= link_to  'Show', add %></button>
+    </div>
+  </div>
+  </div>
+    <% end %>
+    
+
+      
+ 
+  <% end %>
+    
+  </div>
+</div>
+  
+   
+ 
+<br>
+
+
+

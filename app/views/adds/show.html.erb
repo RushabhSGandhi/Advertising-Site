@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container container-fluid">
+
+<div class="row">
+<% if user_signed_in? %>
+<div class="col col-md-3" style="margin:1em">
+
+<div class="card" style="width: 18rem; margin:1em">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><button class="btn btn-outline-secondary"><%= link_to 'Edit', edit_add_path(@add) %> </button></li>
+    <li class="list-group-item"><button class="btn btn-outline-info"><%= link_to 'Back', adds_path %></button></li>
+    <li class="list-group-item"><%= link_to 'Destroy', @add, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+</div>
+
+</div>
+<% end %> 
+
+<div class="col col-md-8">
+<img src=<%= @add.images %> class="img-fluid" alt="Responsive image">
+<p>
+  <h2><strong>Title:</strong></h2>
+  <%= @add.title %>
+</p>
+<br/>
+<p>
+ <h2> <strong>Description:</strong></h2>
+ <h6><%= @add.description %></h6>
+</p>
+
+<br/>
+<p>
+ <h2> <strong>Is published:</strong> </h2>
+ <h6> <%= @add.is_published %><h6>
+</p>
+</div>
+ 
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+ |
+
